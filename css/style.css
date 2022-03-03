@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*TITULO*/
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    color: rgb(212, 209, 209);;
+    text-align: center;
+    /*background-color: rgb(245, 170, 31);*/
+    background-image: linear-gradient(to left,#fc4a1a,#f7b733);
+}
+
+/*MENU DE NAVEGACION*/
+.menu{
+    background-color: black;    
+}
+.menu ul{
+    display: flex;
+    list-style-type: none; 
+    justify-content: center;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 1% 5%;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(212, 209, 209);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+.menu ul li a:hover{
+    color: rgb(245, 170, 31);
+}
+
+/*BODY*/
+body{
+    background: rgb(212, 209, 209);
+}
+
+/*INICIO*/
+.inicio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "imagen1 imagen2"
+                        "imagen3 imagen4"
+                        "imagen5 imagen6";
+    padding: 30px;
+    margin: 30px;
+}
+.inicio img{
+    height: 80%;
+    width: 80%;
+    padding: 15px;
+}
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.imagen3{
+    grid-area: imagen3;
+}
+.imagen4{
+    grid-area: imagen4;
+}
+.imagen5{
+    grid-area: imagen5;
+}
+.imagen6{
+    grid-area: imagen6;
+}
+.inicio div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*NOSOTROS*/
+.nosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px;
+}
+.nosotros img{
+    width: 600px;
+    height: 600px;
+}
+.nosotrosTexto{
+    max-width: 700px;
+}
+.nosotrosTexto h2{
+    font-size: 70px;
+    text-align: center;
+    padding: 40px;
+}
+.nosotrosTexto p{
+    font-size: 25px;
+    padding: 30px;
+}
+
+/*PRODUCTOS*/
+.productos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-areas: "panaderia_imagen panaderia "
+                        "confiteria confiteria_imagen"
+                        "pasteleria_imagen pasteleria"
+                        "salado salado_imagen";
+}
+.panaderia_imagen{
+    grid-area: panaderia_imagen;
+}
+.panaderia{
+    grid-area: panaderia;
+}
+.confiteria{
+    grid-area: confiteria;
+}
+.confiteria_imagen{
+    grid-area: confiteria_imagen;
+}
+.pasteleria_imagen{
+    grid-area: pasteleria_imagen;
+}
+.pasteleria{
+    grid-area: pasteleria;
+}
+.salado{
+    grid-area: salado;
+}
+.salado_imagen{
+    grid-area: salado_imagen;
+}
+
+.productos div{
+    display: flex;
+    justify-content:center ;
+    padding: 30px;
+    margin: 25px;
+}
+.productos div img{
+    height: 90%; 
+    width: 90%;
+    
+}
+.productos div h2{
+    padding: 100px;
+    font-size: 75px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+/*SERVICIOS*/
+.servicios{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 20% 20%;
+    grid-template-areas: "img_servicios img_servicios"
+                        "catering catering"
+                        "lista1 lista2";
+    margin: 10px;
+    padding: 50px;
+}
+.img_servicios{
+    grid-area: img_servicios;
+}
+.catering{
+    grid-area: catering;
+}
+.lista1{
+    grid-area: lista1;
+}
+.lista2{
+    grid-area: lista2;
+}
+.servicios img{
+    width: 80%;
+    padding: 30px;
+}
+.servicios div{
+    display: flex;
+    justify-content: center;
+}
+.servicios h2{
+    font-size: 50px;
+    padding: 20px;
+}
+.servicios li{
+    font-size: 30px;
+    padding: 10px;
+}
+
+/*CONTACTO*/
+.contacto{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+    padding: 30px;     
+}
+.contacto form{
+    display:inline-block;
+    margin-left: 200px;
+    padding: 30px;
+}
+.contacto iframe{
+    margin-right: 100px;
+    padding: 30px;
+}
+form{
+    background-color: orange;
+    margin: 55px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border: solid  grey 5px;
+}
+.boton{
+    background-color: rgb(122, 118, 118);
+    width: 240px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    color: white;
+}
+.boton:hover{
+    background-color: black;
+}
+
+/*FOOTER*/
+footer{
+    background:rgb(255, 3, 3);
+    color: rgb(212, 209, 209);
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    font-size: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+}
+
+/************************MEDIA QUERIES*************************/
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    /*TITULO - MEDIA QUERIES*/
+    .titulo{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: rgb(212, 209, 209);;
+        text-align: center;
+        background-color: rgb(245, 170, 31);
+    }
+    
+    /*MENU DE NAVEGACION - MEDIA QUERIES*/
+    .menu{
+        background-color: black;    
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none; 
+        justify-content: center;
+    }
+    .menu ul li{
+        display: inline-block;
+        padding: 1% 5%;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: rgb(212, 209, 209);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+    }
+    .menu ul li a:hover{
+        color: rgb(245, 170, 31);
+    }
+    
+    /*BODY - MEDIA QUERIES*/
+    body{
+        background: rgb(212, 209, 209);
+    }
+    
+    /*INICIO - MEDIA QUERIES*/
+    .inicio{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "imagen1"
+                            "imagen2"
+                            "imagen3"
+                            "imagen4"
+                            "imagen5"
+                            "imagen6";
+        margin: 20px;
+    }
+    .inicio div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .inicio img{
+        height: 80%;
+        width: 80%;
+    }
+    .imagen1{
+        grid-area: imagen1;
+    }
+    .imagen2{
+        grid-area: imagen2;
+    }
+    .imagen3{
+        grid-area: imagen3;
+    }
+    .imagen4{
+        grid-area: imagen4;
+    }
+    .imagen5{
+        grid-area: imagen5;
+    }
+    .imagen6{
+        grid-area: imagen6;
+    }
+    
+    /*NOSOTROS - MEDIA QUERIES*/
+    .nosotros{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        margin: 30px;
+    }
+    .nosotros img{
+        width: 400px;
+        height: 400px;
+    }
+    .nosotrosTexto{
+        max-width: 600px;
+    }
+    .nosotrosTexto h2{
+        font-size: 50px;
+        text-align: center;
+        padding: 40px;
+    }
+    .nosotrosTexto p{
+        font-size: 25px;
+        padding: 30px;
+    }
+    
+
+    /*FOOTER - MEDIA QUERIES*/
+    footer{
+        background:rgb(255, 3, 3);
+        color: rgb(212, 209, 209);
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        font-size: 15px;
+    }
+    footer a{
+        text-decoration: none;
+        color: yellow;
+        font-size: 15px;
+    }
+    
+}
+
+
