@@ -9,7 +9,6 @@
     font-size: 100px;
     color: rgb(212, 209, 209);;
     text-align: center;
-    /*background-color: rgb(245, 170, 31);*/
     background-image: linear-gradient(to left,#fc4a1a,#f7b733);
 }
 
@@ -55,6 +54,11 @@ body{
 .nosotros img{
     width: 600px;
     height: 600px;
+    filter: grayscale(0);
+}
+.nosotros img:hover{
+    transform: scale(1.2, 1.2);
+    filter: grayscale(1);
 }
 .nosotrosTexto{
     max-width: 700px;
@@ -186,6 +190,9 @@ form{
     color: white;
     border: solid  grey 5px;
 }
+.cajaform:focus{
+    font-size: 30px;
+}
 .boton{
     background-color: rgb(122, 118, 118);
     width: 240px;
@@ -221,7 +228,7 @@ footer a{
         padding: 0;
     }
     
-    /*TITULO - MEDIA QUERIES*/
+/*TITULO - MEDIA QUERIES*/
     .titulo{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 30px;
@@ -230,76 +237,8 @@ footer a{
         background-color: rgb(245, 170, 31);
     }
     
-    /*MENU DE NAVEGACION - MEDIA QUERIES*/
-    .menu{
-        background-color: black;    
-    }
-    .menu ul{
-        display: flex;
-        flex-direction: column;
-        list-style-type: none; 
-        justify-content: center;
-    }
-    .menu ul li{
-        display: inline-block;
-        padding: 1% 5%;
-    }
-    .menu ul li a{
-        text-decoration: none;
-        color: rgb(212, 209, 209);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 20px;
-    }
-    .menu ul li a:hover{
-        color: rgb(245, 170, 31);
-    }
-    
-    /*BODY - MEDIA QUERIES*/
-    body{
-        background: rgb(212, 209, 209);
-    }
-    
-    /*INICIO - MEDIA QUERIES*/
-    .inicio{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "imagen1"
-                            "imagen2"
-                            "imagen3"
-                            "imagen4"
-                            "imagen5"
-                            "imagen6";
-        margin: 20px;
-    }
-    .inicio div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .inicio img{
-        height: 80%;
-        width: 80%;
-    }
-    .imagen1{
-        grid-area: imagen1;
-    }
-    .imagen2{
-        grid-area: imagen2;
-    }
-    .imagen3{
-        grid-area: imagen3;
-    }
-    .imagen4{
-        grid-area: imagen4;
-    }
-    .imagen5{
-        grid-area: imagen5;
-    }
-    .imagen6{
-        grid-area: imagen6;
-    }
-    
-    /*NOSOTROS - MEDIA QUERIES*/
+
+/*NOSOTROS - MEDIA QUERIES*/
     .nosotros{
         display: flex;
         flex-direction: column-reverse;
@@ -325,6 +264,44 @@ footer a{
         padding: 30px;
     }
     
+/*SERVICIOS - MEDIA QUERIES*/ /*ESTO ESTA MAL, ME GUSTARIA QUE LO VIERAS POR QUE QUEDA TODO CORRIDO LO MISMO ME PARA CON PRODUCTOS*/
+    .servicios{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "img_servicios"
+                            "catering"
+                            "lista1"
+                            "lista2";
+    
+    }
+    .img_servicios{
+        grid-area: img_servicios;
+    }
+    .catering{
+        grid-area: catering;
+    }
+    .lista1{
+        grid-area: lista1;
+    }
+    .lista2{
+        grid-area: lista2;
+    }
+    .servicios img{
+        width: 80%
+    }
+    .servicios div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .servicios h2{
+        font-size: 20px;
+        padding: 20px;
+    }
+    .servicios li{
+        font-size: 20px;
+        padding: 20px;
+    }
 
     /*FOOTER - MEDIA QUERIES*/
     footer{
